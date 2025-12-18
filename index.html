@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Деректер базасы SQL</title>
+<style>
+body { font-family: Arial; margin: 0; background: #f4f4f4; }
+header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
+nav button {
+    margin: 5px; padding: 10px 15px;
+    border: none; background: #3498db; color: white;
+    cursor: pointer; border-radius: 5px;
+}
+nav button:hover { background: #2980b9; }
+section { display: none; padding: 20px; background: white; margin: 10px; border-radius: 8px; }
+h2 { color: #2c3e50; }
+</style>
+
+<script>
+function show(id){
+  document.querySelectorAll("section").forEach(s => s.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+</script>
+</head>
+
+<body>
+
+<header>
+<h1>Деректер базасы және SQL</h1>
+<p>Оқу сайты</p>
+<nav>
+<button onclick="show('lectures')">Лекциялар</button>
+<button onclick="show('practice')">Практика</button>
+<button onclick="show('tests')">Тест</button>
+<button onclick="show('questions')">100 сұрақ</button>
+<button onclick="show('people')">Танымал адамдар</button>
+</nav>
+</header>
+
+<section id="lectures">
+<h2>📘 10 Лекция</h2>
+<ol>
+<li>Деректер базасына кіріспе</li>
+<li>SQL тілі</li>
+<li>CREATE, DROP</li>
+<li>INSERT, UPDATE, DELETE</li>
+<li>SELECT операторы</li>
+<li>WHERE шарттары</li>
+<li>JOIN түрлері</li>
+<li>GROUP BY, HAVING</li>
+<li>Индекстер</li>
+<li>Қауіпсіздік</li>
+</ol>
+</section>
+
+<section id="practice">
+<h2>🛠 10 Практикалық тапсырма</h2>
+<ol>
+<li>Кесте құру</li>
+<li>Дерек енгізу</li>
+<li>Дерек таңдау</li>
+<li>Шартпен таңдау</li>
+<li>JOIN қолдану</li>
+<li>GROUP BY</li>
+<li>DELETE қолдану</li>
+<li>UPDATE қолдану</li>
+<li>Индекс жасау</li>
+<li>Толық сұраныс жазу</li>
+</ol>
+</section>
+
+<section id="tests">
+<h2>📝 10 Тест сұрақтары</h2>
+<p>1. SQL деген не?<br>
+A) Бағдарлама тілі<br>
+<b>B) Деректер базасын басқару тілі</b></p>
+<p>2. SELECT не үшін?<br>
+<b>A) Дерек алу</b></p>
+</section>
+
+<section id="questions">
+<h2>📚 100 Теориялық сұрақ</h2>
+<ol>
+<script>
+for(let i=1;i<=100;i++){
+document.write("<li>SQL сұрақ №"+i+"</li>");
+}
+</script>
+</ol>
+</section>
+
+<section id="people">
+<h2>🌍 Танымал адамдар</h2>
+<ul>
+<li>Эдгар Кодд</li>
+<li>Майкл Стоунбрейкер</li>
+<li>Ларри Эллисон</li>
+<li>Билл Гейтс</li>
+<li>Линус Торвальдс</li>
+</ul>
+</section>
+
+<script>show('lectures');</script>
+</body>
+</html>
